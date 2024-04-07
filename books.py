@@ -49,10 +49,6 @@ elif g == 'Non Fiction':
 else:
     df = df[df['Genre'].isin(['Fiction', 'Non Fiction', 'Both'])]
 
-#genres = df['Genre'].unique()
-#selected_genres = st.sidebar.multiselect('Genre', genres, default=genres)
-#df = df[df['Genre'].isin(selected_genres)]
-
 show_authors = st.sidebar.checkbox('Show authors')
 if show_authors:
     authors = df['Author'].unique()
