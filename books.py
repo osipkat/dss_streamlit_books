@@ -52,7 +52,7 @@ else:
 show_authors = st.sidebar.checkbox('Show authors')
 if show_authors:
     authors = df['Author'].unique()
-    selected_authors = st.sidebar.multiselect('Author', authors, default='George R. R. Martin')
+    selected_authors = st.sidebar.multiselect('Author', authors)
     df = df[df['Author'].isin(selected_authors)]
 
 st.markdown(f'There are **{df.shape[0]}** books that match chosen filters.')
